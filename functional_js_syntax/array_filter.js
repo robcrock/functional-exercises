@@ -2,10 +2,16 @@
 const words = ['tardis', 'grok', 'frak', 'blaster', 'klingon', 'shepherd']
 
 // expected output: Array ['shepherd']
+const wordsFiltered = words.filter(word => word.length > 7);
 
+console.log(wordsFiltered);
 // ----------------------------------------------------------
 // 2. Find all even values
 const words = [12, 13, 14, 15, 16, 17]
+
+const evenWords = words.filter(word => word % 2 == 0);
+
+console.log(evenWords);
 
 // expected output: Array [12, 14, 16]
 
@@ -41,6 +47,10 @@ const hunters = [
         status: 'active',
     },
 ]
+
+const activeHunters = hunters.filter(hunter => hunter.status == 'active');
+
+console.log(activeHunters);
 
 // expected output: Array [
 //     {
