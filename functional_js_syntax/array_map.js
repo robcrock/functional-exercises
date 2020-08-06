@@ -2,12 +2,12 @@
 const start = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // your code
-const end = start.map((item, i, arr) => {
-  return arr.unshift(item);
+const end = start.map((elem, index, array) => {
+  return array[array.length - 1 - index];
 });
-console.log(end);
 
 // expected output: Array [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+console.log(end);
 
 // ----------------------------------------------------------
 // 2. Write a map function to print the Job: Name:
@@ -53,13 +53,12 @@ console.log(multiDimArr);
 
 // ----------------------------------------------------------
 // 5. For each item in this array, create a multidimensional array containing the entire original array.
-
 const sci_fi_shows = [1, 2, 3, 4]
 
 // your code
-const innerArr = function ()
 const arrOfArrs = sci_fi_shows.map((item, i, arr) => {
-
+  return arr;
 })
 
 // expected output: Array [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]
+console.log(arrOfArrs);
