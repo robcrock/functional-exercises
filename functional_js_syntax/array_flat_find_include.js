@@ -5,13 +5,19 @@
 
 const characters = [
     ['Starlord', 'Gamora', 'Groot'],
-    ['Dr. Strange', ['Captain America', 'Bucky Barnes'], ['Thor', 'Hulk', ['Loki']], 'Thanos']
-    ['Iron Man', 'Ultron'],
+    [
+        'Dr. Strange',
+        ['Captain America', 'Bucky Barnes'],
+        ['Thor', 'Hulk', ['Loki']],
+        'Thanos',
+    ][('Iron Man', 'Ultron')],
     ['Spider Man', ['Venom']],
-    ['Professor X', 'Wolverine', 'Quicksilver', ['Magneto']]
-]
+    ['Professor X', 'Wolverine', 'Quicksilver', ['Magneto']],
+];
 
-const results = characters.flat()
+const results = characters.flat();
+
+console.log(results);
 
 // ----------------------------------------------------------
 // FIND EXERCISE
@@ -20,22 +26,18 @@ const results = characters.flat()
 
 // Determine whether any of the following have a value that contains the characters 'ABC'
 
-const ids = [
-    'ADHKE',
-    'ANFKM',
-    'QIMVU',
-    'PQMFU',
-    'ABCKO',
-    'IUABC'
-]
+const ids = ['ADHKE', 'ANFKM', 'QIMVU', 'PQMFU', 'ABCKO', 'IUABC'];
 
+const foundIDs = ids.find(elem => elem.includes('ABC'));
+
+console.log(foundIDs);
 
 // ----------------------------------------------------------
 // INCLUDE EXERCISES
 // ----------------------------------------------------------
 // 1. It best to use INCLUDES when what the value is does not matter, simply its presence. Imagine the scenario that you are need to check a user's id against a list of admin id's.
 
-const currentUserId = '29nv283bfc0szn16723'
+const currentUserId = '29nv283bfc0szn16723';
 
 const admins = [
     '02398cn7syap0dmbnv0',
@@ -45,8 +47,10 @@ const admins = [
     '29nv283bfc0szn16723',
     '029834zmnv9jhgfu2ab',
     '12mnz09v87bas78fb12',
-    '098Xc8x76m3nb4aposi'
-]
+    '098Xc8x76m3nb4aposi',
+];
+
+console.log(admins.includes(currentUserId));
 
 // ----------------------------------------------------------
 
@@ -60,8 +64,8 @@ const A = [
     '29nv283bfc0szn16723',
     '029834zmnv9jhgfu2ab',
     '12mnz09v87bas78fb12',
-    '098Xc8x76m3nb4aposi'
-]
+    '098Xc8x76m3nb4aposi',
+];
 
 const B = [
     '13xnse8aanv87Hdnfv8',
@@ -69,5 +73,9 @@ const B = [
     '12mn0vnZkadfh237LPd',
     '1209MNBd8723nvkwejs',
     '298374naskdj273ubsl',
-    '098LKJnsvijevkwejf6'
-]
+    '098LKJnsvijevkwejf6',
+];
+
+const C = A.filter(item => B.includes(item));
+
+console.log(C);
