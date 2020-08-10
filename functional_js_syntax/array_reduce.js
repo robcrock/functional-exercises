@@ -7,7 +7,8 @@ const text = [
 ];
 
 // Your Code Here
-const reducedText = text.reduce((accum, next) => `${accum} ${next}`);
+const reducer = (accum, next) => `${accum} ${next}`;
+const reducedText = text.reduce(reducer);
 
 // expected output: "The ships hung in the sky, much the way that bricks don't"
 console.log(reducedText);

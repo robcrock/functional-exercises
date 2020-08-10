@@ -4,15 +4,15 @@
 // This short list of some marvel characters is abitrarily nested. Experiment with the effect of flattening to various depths.
 
 const characters = [
-    ['Starlord', 'Gamora', 'Groot'],
-    [
-        'Dr. Strange',
-        ['Captain America', 'Bucky Barnes'],
-        ['Thor', 'Hulk', ['Loki']],
-        'Thanos',
-    ][('Iron Man', 'Ultron')],
-    ['Spider Man', ['Venom']],
-    ['Professor X', 'Wolverine', 'Quicksilver', ['Magneto']],
+  ['Starlord', 'Gamora', 'Groot'],
+  [
+    'Dr. Strange',
+    ['Captain America', 'Bucky Barnes'],
+    ['Thor', 'Hulk', ['Loki']],
+    'Thanos',
+  ][('Iron Man', 'Ultron')],
+  ['Spider Man', ['Venom']],
+  ['Professor X', 'Wolverine', 'Quicksilver', ['Magneto']],
 ];
 
 const results = characters.flat();
@@ -40,14 +40,14 @@ console.log(foundIDs);
 const currentUserId = '29nv283bfc0szn16723';
 
 const admins = [
-    '02398cn7syap0dmbnv0',
-    '2389sakvjhw8e7f09fv',
-    '09mxvb82kzjd6v1sfdg',
-    '9a76zxmsdnv1u622345',
-    '29nv283bfc0szn16723',
-    '029834zmnv9jhgfu2ab',
-    '12mnz09v87bas78fb12',
-    '098Xc8x76m3nb4aposi',
+  '02398cn7syap0dmbnv0',
+  '2389sakvjhw8e7f09fv',
+  '09mxvb82kzjd6v1sfdg',
+  '9a76zxmsdnv1u622345',
+  '29nv283bfc0szn16723',
+  '029834zmnv9jhgfu2ab',
+  '12mnz09v87bas78fb12',
+  '098Xc8x76m3nb4aposi',
 ];
 
 console.log(admins.includes(currentUserId));
@@ -57,23 +57,23 @@ console.log(admins.includes(currentUserId));
 // 2. Checking between lists. Another thing that you might need to do in real life is check items between two arrays. Check if array B has any values that are also in array A. This becomes especially helpful when the values are hard to distinguish visually
 
 const A = [
-    '02398cn7syap0dmbnv0',
-    '2389sakvjhw8e7f09fv',
-    '09mxvb82kzjd6v1sfdg',
-    '9a76zxmsdnv1u622345',
-    '29nv283bfc0szn16723',
-    '029834zmnv9jhgfu2ab',
-    '12mnz09v87bas78fb12',
-    '098Xc8x76m3nb4aposi',
+  '02398cn7syap0dmbnv0',
+  '2389sakvjhw8e7f09fv',
+  '09mxvb82kzjd6v1sfdg',
+  '9a76zxmsdnv1u622345',
+  '29nv283bfc0szn16723',
+  '029834zmnv9jhgfu2ab',
+  '12mnz09v87bas78fb12',
+  '098Xc8x76m3nb4aposi',
 ];
 
 const B = [
-    '13xnse8aanv87Hdnfv8',
-    '2389sakvjhw8e7f09fv',
-    '12mn0vnZkadfh237LPd',
-    '1209MNBd8723nvkwejs',
-    '298374naskdj273ubsl',
-    '098LKJnsvijevkwejf6',
+  '13xnse8aanv87Hdnfv8',
+  '2389sakvjhw8e7f09fv',
+  '12mn0vnZkadfh237LPd',
+  '1209MNBd8723nvkwejs',
+  '298374naskdj273ubsl',
+  '098LKJnsvijevkwejf6',
 ];
 
 const C = A.filter(item => B.includes(item));
